@@ -30,7 +30,7 @@ export const Header: React.FC<HeaderProps> = ({ isInternal = false }) => {
     <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-[#191919]/80 backdrop-blur-sm border-b border-border dark:border-[#2A2A2A] z-50 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-primary dark:text-[#F5F5F5] transition-colors duration-300">
+          <Link href="/" className="section-title-serif text-2xl text-primary dark:text-[#F5F5F5] transition-colors duration-300">
             RedaIA
           </Link>
 

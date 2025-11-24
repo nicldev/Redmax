@@ -37,7 +37,7 @@ export default function Redacoes() {
         <Card className="mb-6">
           <div className="flex items-center gap-4 flex-wrap">
             <Filter className="w-4 h-4 text-secondary dark:text-[#A9A9A9] transition-colors duration-300" />
-            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] text-sm focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
+            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] small focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
               <option>Todos os temas</option>
               <option>Educação</option>
               <option>Meio Ambiente</option>
@@ -45,19 +45,19 @@ export default function Redacoes() {
               <option>Tecnologia</option>
               <option>Saúde</option>
             </select>
-            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] text-sm focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
+            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] small focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
               <option>Todas as datas</option>
               <option>Última semana</option>
               <option>Último mês</option>
               <option>Últimos 3 meses</option>
             </select>
-            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] text-sm focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
+            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] small focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
               <option>Todas as notas</option>
               <option>700+</option>
               <option>800+</option>
               <option>900+</option>
             </select>
-            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] text-sm focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
+            <select className="px-3 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] small focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300">
               <option>Todas as competências</option>
               <option>C1 mais baixa</option>
               <option>C2 mais baixa</option>
@@ -74,15 +74,15 @@ export default function Redacoes() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-border">
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Título</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Data</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Tema</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Nota</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C1</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C2</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C3</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C4</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C5</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Título</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Data</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Tema</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Nota</th>
+                    <th className="text-left py-3 px-4 mono small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C1</th>
+                    <th className="text-left py-3 px-4 mono small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C2</th>
+                    <th className="text-left py-3 px-4 mono small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C3</th>
+                    <th className="text-left py-3 px-4 mono small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C4</th>
+                    <th className="text-left py-3 px-4 mono small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">C5</th>
                 </tr>
               </thead>
               <tbody>
@@ -93,14 +93,14 @@ export default function Redacoes() {
                         {redacao.titulo}
                       </Link>
                     </td>
-                    <td className="py-4 px-4 text-secondary dark:text-[#A9A9A9] text-sm transition-colors duration-300">{redacao.data}</td>
-                    <td className="py-4 px-4 text-secondary dark:text-[#A9A9A9] text-sm transition-colors duration-300">{redacao.tema}</td>
-                    <td className="py-4 px-4 font-semibold text-primary dark:text-[#F5F5F5] transition-colors duration-300">{redacao.nota}/1000</td>
-                    <td className="py-4 px-4 text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c1}</td>
-                    <td className="py-4 px-4 text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c2}</td>
-                    <td className="py-4 px-4 text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c3}</td>
-                    <td className="py-4 px-4 text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c4}</td>
-                    <td className="py-4 px-4 text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c5}</td>
+                    <td className="py-4 px-4 mono small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.data}</td>
+                    <td className="py-4 px-4 text-secondary dark:text-[#A9A9A9] small transition-colors duration-300">{redacao.tema}</td>
+                    <td className="py-4 px-4 number-mono font-semibold text-primary dark:text-[#F5F5F5] transition-colors duration-300">{redacao.nota}/1000</td>
+                    <td className="py-4 px-4 mono small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c1}</td>
+                    <td className="py-4 px-4 mono small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c2}</td>
+                    <td className="py-4 px-4 mono small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c3}</td>
+                    <td className="py-4 px-4 mono small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c4}</td>
+                    <td className="py-4 px-4 mono small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{redacao.c5}</td>
                   </tr>
                 ))}
               </tbody>

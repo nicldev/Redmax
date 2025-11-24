@@ -20,7 +20,7 @@ export default function Login() {
           </Heading>
           <form className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
+              <label className="block small font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
                 Email
               </label>
               <input
@@ -30,7 +30,7 @@ export default function Login() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
+              <label className="block small font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
                 Senha
               </label>
               <input
@@ -46,7 +46,7 @@ export default function Login() {
               Entrar
             </Button>
           </form>
-          <p className="text-center text-sm text-secondary dark:text-[#A9A9A9] mt-6 transition-colors duration-300">
+          <p className="text-center small text-secondary dark:text-[#A9A9A9] mt-6 transition-colors duration-300">
             Não tem uma conta?{' '}
             <Link href="/cadastro" className="text-accent hover:underline">
               Criar conta

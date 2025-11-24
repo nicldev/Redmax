@@ -57,10 +57,10 @@ export default function ResultadoAvaliacao() {
         {/* Topo - Nota final */}
         <Card className="text-center mb-8">
           <div className="mb-4">
-            <div className="text-6xl font-bold text-primary dark:text-[#F5F5F5] mb-2 transition-colors duration-300">
+            <div className="number-mono text-6xl font-bold text-primary dark:text-[#F5F5F5] mb-2 transition-colors duration-300">
               {notaFinal}/1000
             </div>
-            <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${chip.color}`}>
+            <span className={`inline-block px-3 py-1 rounded-full small font-medium ${chip.color}`}>
               {chip.text} · Próximo do Ideal
             </span>
           </div>
@@ -71,8 +71,8 @@ export default function ResultadoAvaliacao() {
           {competencias.map((comp, index) => (
             <Card key={index}>
               <div className="flex justify-between items-start mb-3">
-                <h3 className="font-semibold text-sm">{comp.nome}</h3>
-                <span className={`font-bold ${getNotaColor(comp.nota)} transition-colors duration-300`}>
+                <h3 className="font-sans font-semibold small">{comp.nome}</h3>
+                <span className={`number-mono font-bold ${getNotaColor(comp.nota)} transition-colors duration-300`}>
                   {comp.nota}/{comp.max}
                 </span>
               </div>
@@ -85,7 +85,7 @@ export default function ResultadoAvaliacao() {
                   style={{ width: `${(comp.nota / comp.max) * 100}%` }}
                 />
               </div>
-              <p className="text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{comp.feedback}</p>
+              <p className="small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{comp.feedback}</p>
             </Card>
           ))}
         </div>
@@ -121,17 +121,17 @@ export default function ResultadoAvaliacao() {
           <Heading level={3} className="mb-4">Sugestão de reescrita</Heading>
           <div className="space-y-4">
             <div>
-              <p className="text-sm text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">Trecho original:</p>
+              <p className="small text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">Trecho original:</p>
               <div className="bg-gray-50 dark:bg-[#2A2A2A] p-4 rounded-md border border-border dark:border-[#2A2A2A] transition-colors duration-300">
-                <p className="text-sm italic">
+                <p className="small italic font-sans">
                   "A educação é importante para o desenvolvimento do país, mas ainda há muitos desafios a serem superados."
                 </p>
               </div>
             </div>
             <div>
-              <p className="text-sm text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">Versão sugerida:</p>
+              <p className="small text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">Versão sugerida:</p>
               <div className="bg-accent/5 dark:bg-accent/10 p-4 rounded-md border border-accent/20 dark:border-accent/30 transition-colors duration-300">
-                <p className="text-sm">
+                <p className="small font-sans">
                   "A educação é fundamental para o desenvolvimento socioeconômico do país. Segundo dados do IBGE, 
                   entretanto, ainda existem desafios estruturais significativos, como a evasão escolar e a 
                   desigualdade de acesso, que precisam ser superados por meio de políticas públicas efetivas."

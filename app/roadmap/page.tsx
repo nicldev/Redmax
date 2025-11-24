@@ -92,7 +92,7 @@ export default function Roadmap() {
               <Target className="w-5 h-5 text-accent" />
               <span className="font-semibold">Progresso geral</span>
             </div>
-            <span className="text-2xl font-bold text-primary dark:text-[#F5F5F5] transition-colors duration-300">{progressoGeral}%</span>
+            <span className="number-mono text-2xl font-bold text-primary dark:text-[#F5F5F5] transition-colors duration-300">{progressoGeral}%</span>
           </div>
           <div className="w-full bg-border dark:bg-[#2A2A2A] rounded-full h-3">
             <div
@@ -116,8 +116,8 @@ export default function Roadmap() {
                   className="w-full flex items-center justify-between text-left"
                 >
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold mb-2">{semana.titulo}</h3>
-                    <div className="flex items-center gap-4 text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
+                    <h3 className="font-sans text-xl font-semibold mb-2">{semana.titulo}</h3>
+                    <div className="flex items-center gap-4 small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
                       <span>{tarefasConcluidas}/{semana.tarefas.length} tarefas concluídas</span>
                       <div className="w-32 bg-border dark:bg-[#2A2A2A] rounded-full h-2">
                         <div

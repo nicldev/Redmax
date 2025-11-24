@@ -38,7 +38,7 @@ export default function Dashboard() {
       <div className="max-w-7xl mx-auto px-6 py-12">
         {/* Hero Interno */}
         <div className="mb-12">
-          <h1 className="text-3xl font-semibold mb-2">Olá, Nicolas 👋</h1>
+          <h1 className="section-title-serif text-3xl mb-2">Olá, Nicolas 👋</h1>
           <p className="text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Pronto para treinar hoje?</p>
         </div>
 
@@ -46,16 +46,16 @@ export default function Dashboard() {
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {/* Card 1 - Média atual */}
           <Card>
-            <h3 className="text-sm text-secondary dark:text-[#A9A9A9] mb-4 transition-colors duration-300">Média atual</h3>
-            <div className="text-4xl font-bold text-primary dark:text-[#F5F5F5] mb-6 transition-colors duration-300">
+            <h3 className="small text-secondary dark:text-[#A9A9A9] mb-4 transition-colors duration-300">Média atual</h3>
+            <div className="number-mono text-4xl font-bold text-primary dark:text-[#F5F5F5] mb-6 transition-colors duration-300">
               {mediaAtual}/1000
             </div>
             <div className="space-y-3">
               {competencias.map((comp, index) => (
                 <div key={index}>
                   <div className="flex justify-between text-xs mb-1">
-                    <span className="text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{comp.nome}</span>
-                    <span className="text-primary dark:text-[#F5F5F5] font-medium transition-colors duration-300">{comp.nota}/{comp.max}</span>
+                    <span className="small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{comp.nome}</span>
+                    <span className="number-mono text-primary dark:text-[#F5F5F5] font-medium transition-colors duration-300">{comp.nota}/{comp.max}</span>
                   </div>
                   <div className="w-full bg-border dark:bg-[#2A2A2A] rounded-full h-2">
                     <div
@@ -78,7 +78,7 @@ export default function Dashboard() {
                     className="w-full bg-accent rounded-t"
                     style={{ height: `${value}%` }}
                   />
-                    <span className="text-xs text-secondary dark:text-[#A9A9A9] mt-2 transition-colors duration-300">Sem {index + 1}</span>
+                    <span className="mono text-xs text-secondary dark:text-[#A9A9A9] mt-2 transition-colors duration-300">Sem {index + 1}</span>
                 </div>
               ))}
             </div>
@@ -121,11 +121,11 @@ export default function Dashboard() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-border">
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Título</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Data</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Tema</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Nota</th>
-                    <th className="text-left py-3 px-4 text-sm font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Status</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Título</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Data</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Tema</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Nota</th>
+                    <th className="text-left py-3 px-4 small font-semibold text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Status</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -156,8 +156,8 @@ export default function Dashboard() {
         <Card className="mb-12">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h3 className="text-xl font-semibold mb-2">Semana 3 — Argumentação</h3>
-              <p className="text-secondary dark:text-[#A9A9A9] text-sm transition-colors duration-300">Foco em construção de argumentos sólidos</p>
+              <h3 className="font-sans text-xl font-semibold mb-2">Semana 3 — Argumentação</h3>
+              <p className="text-secondary dark:text-[#A9A9A9] small transition-colors duration-300">Foco em construção de argumentos sólidos</p>
             </div>
             <Link href="/roadmap">
               <Button variant="outline">Ver Roadmap</Button>

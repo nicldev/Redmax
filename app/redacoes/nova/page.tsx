@@ -49,7 +49,7 @@ export default function NovaRedacao() {
           value={titulo}
           onChange={(e) => setTitulo(e.target.value)}
           placeholder="Título da redação..."
-          className="w-full text-3xl font-semibold mb-8 bg-transparent border-none outline-none placeholder:text-secondary/50 dark:placeholder:text-[#A9A9A9]/50 text-primary dark:text-[#F5F5F5] transition-colors duration-300"
+          className="w-full section-title-serif text-3xl mb-8 bg-transparent border-none outline-none placeholder:text-secondary/50 dark:placeholder:text-[#A9A9A9]/50 text-primary dark:text-[#F5F5F5] transition-colors duration-300"
         />
 
         {/* Topo do editor */}
@@ -80,7 +80,7 @@ export default function NovaRedacao() {
               </button>
               
               {cronometro && (
-                <span className="text-lg font-mono">
+                <span className="number-mono text-lg">
                   {Math.floor(tempo / 60)}:{(tempo % 60).toString().padStart(2, '0')}
                 </span>
               )}
@@ -103,9 +103,9 @@ export default function NovaRedacao() {
                 className="w-full min-h-[600px] p-6 text-base leading-relaxed resize-none border-none outline-none bg-transparent text-primary dark:text-[#F5F5F5] placeholder:text-secondary/30 dark:placeholder:text-[#A9A9A9]/30 transition-colors duration-300"
                 style={{ fontFamily: 'Inter, sans-serif' }}
               />
-              <div className="border-t border-border dark:border-[#2A2A2A] pt-4 mt-4 flex justify-between text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
-                <span>{palavras} palavras</span>
-                <span>{caracteres} caracteres</span>
+              <div className="border-t border-border dark:border-[#2A2A2A] pt-4 mt-4 flex justify-between small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
+                <span className="mono">{palavras} palavras</span>
+                <span className="mono">{caracteres} caracteres</span>
               </div>
             </Card>
           </div>
@@ -117,7 +117,7 @@ export default function NovaRedacao() {
                 <FileText className="w-4 h-4" />
                 Dicas rápidas
               </h3>
-              <ul className="space-y-2 text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
+              <ul className="space-y-2 small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
                 <li>• Introdução: apresente o tema</li>
                 <li>• Desenvolvimento: argumente com dados</li>
                 <li>• Conclusão: proponha soluções</li>
@@ -126,7 +126,7 @@ export default function NovaRedacao() {
 
             <Card>
               <h3 className="font-semibold mb-3">Estrutura recomendada</h3>
-              <div className="text-sm text-secondary dark:text-[#A9A9A9] space-y-2 transition-colors duration-300">
+              <div className="small text-secondary dark:text-[#A9A9A9] space-y-2 transition-colors duration-300">
                 <p><strong>Introdução:</strong> 4-5 linhas</p>
                 <p><strong>Desenvolvimento:</strong> 2 parágrafos, 5-7 linhas cada</p>
                 <p><strong>Conclusão:</strong> 4-5 linhas</p>
@@ -135,7 +135,7 @@ export default function NovaRedacao() {
 
             <Card>
               <h3 className="font-semibold mb-3">Repertórios úteis</h3>
-              <div className="text-sm text-secondary dark:text-[#A9A9A9] space-y-2 transition-colors duration-300">
+              <div className="small text-secondary dark:text-[#A9A9A9] space-y-2 transition-colors duration-300">
                 <p>• Filósofos: Kant, Rousseau</p>
                 <p>• Sociólogos: Bauman, Giddens</p>
                 <p>• Dados: IBGE, ONU</p>

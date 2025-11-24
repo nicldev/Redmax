@@ -19,14 +19,14 @@ export default function Home() {
           <Heading level={1} className="mb-6">
             A forma mais moderna de treinar redação para o ENEM.
           </Heading>
-          <p className="text-xl text-secondary dark:text-[#A9A9A9] mb-8 max-w-2xl mx-auto transition-colors duration-300">
+          <p className="body-large text-secondary dark:text-[#A9A9A9] mb-8 max-w-2xl mx-auto transition-colors duration-300">
             Receba notas de 0 a 1000 com correção automática, roadmap de estudos e prática contínua.
           </p>
           <div className="flex items-center justify-center gap-4 mb-12">
             <Button onClick={() => window.location.href = '/cadastro'}>
               Começar Grátis
             </Button>
-            <span className="text-secondary dark:text-[#A9A9A9] text-sm transition-colors duration-300">sem cartão, ilimitado</span>
+            <span className="text-secondary dark:text-[#A9A9A9] small transition-colors duration-300">sem cartão, ilimitado</span>
           </div>
           
           {/* Mockup Image Placeholder */}
@@ -35,7 +35,7 @@ export default function Home() {
               <div className="text-center">
                 <FileText className="w-16 h-16 text-accent mx-auto mb-4" />
                 <p className="text-secondary dark:text-[#A9A9A9] transition-colors duration-300">Mockup da ferramenta</p>
-                <p className="text-sm text-secondary/70 dark:text-[#A9A9A9]/70 transition-colors duration-300">Editor estilo Notion com avaliação por IA</p>
+                <p className="small text-secondary/70 dark:text-[#A9A9A9]/70 transition-colors duration-300">Editor estilo Notion com avaliação por IA</p>
               </div>
             </div>
           </div>
@@ -70,8 +70,8 @@ export default function Home() {
                 <div className="w-12 h-12 rounded-full border-2 border-accent flex items-center justify-center mx-auto mb-4">
                   <step.icon className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{step.description}</p>
+                <h3 className="font-sans text-xl font-semibold mb-2">{step.title}</h3>
+                <p className="body text-secondary dark:text-[#A9A9A9] transition-colors duration-300">{step.description}</p>
               </Card>
             ))}
           </div>
@@ -119,7 +119,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-border dark:border-[#2A2A2A] py-8 px-6 transition-colors duration-300">
-        <div className="max-w-notion mx-auto text-center text-secondary dark:text-[#A9A9A9] text-sm transition-colors duration-300">
+        <div className="max-w-notion mx-auto text-center text-secondary dark:text-[#A9A9A9] small transition-colors duration-300">
           <p>© 2024 RedaIA. Todos os direitos reservados.</p>
         </div>
       </footer>

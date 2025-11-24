@@ -23,8 +23,8 @@ export default function Perfil() {
               <div className="w-24 h-24 rounded-full bg-accent flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">
                 N
               </div>
-              <h3 className="text-xl font-semibold mb-2">Nicolas</h3>
-              <p className="text-secondary dark:text-[#A9A9A9] text-sm mb-6 transition-colors duration-300">Estudante</p>
+              <h3 className="font-sans text-xl font-semibold mb-2">Nicolas</h3>
+              <p className="text-secondary dark:text-[#A9A9A9] small mb-6 transition-colors duration-300">Estudante</p>
               <Button variant="outline" className="w-full">
                 <Edit className="w-4 h-4 inline mr-2" />
                 Editar perfil
@@ -40,7 +40,7 @@ export default function Perfil() {
             </Heading>
             <div className="space-y-4">
               <div>
-                <label className="text-sm text-secondary dark:text-[#A9A9A9] mb-1 block transition-colors duration-300">Nome completo</label>
+                <label className="small text-secondary dark:text-[#A9A9A9] mb-1 block transition-colors duration-300">Nome completo</label>
                 <input
                   type="text"
                   defaultValue="Nicolas"
@@ -48,7 +48,7 @@ export default function Perfil() {
                 />
               </div>
               <div>
-                <label className="text-sm text-secondary dark:text-[#A9A9A9] mb-1 block transition-colors duration-300">Email</label>
+                <label className="small text-secondary dark:text-[#A9A9A9] mb-1 block transition-colors duration-300">Email</label>
                 <input
                   type="email"
                   defaultValue="nicolas@example.com"
@@ -56,7 +56,7 @@ export default function Perfil() {
                 />
               </div>
               <div>
-                <label className="text-sm text-secondary dark:text-[#A9A9A9] mb-1 block transition-colors duration-300">Data de nascimento</label>
+                <label className="small text-secondary dark:text-[#A9A9A9] mb-1 block transition-colors duration-300">Data de nascimento</label>
                 <input
                   type="date"
                   className="w-full px-4 py-2 border border-border dark:border-[#2A2A2A] rounded-md bg-white dark:bg-[#202020] text-primary dark:text-[#F5F5F5] focus:outline-none focus:ring-2 focus:ring-accent transition-colors duration-300"
@@ -74,7 +74,7 @@ export default function Perfil() {
           </Heading>
           <div className="flex items-center gap-6">
             <div className="flex-1">
-              <label className="text-sm text-secondary dark:text-[#A9A9A9] mb-2 block transition-colors duration-300">Nota desejada</label>
+              <label className="small text-secondary dark:text-[#A9A9A9] mb-2 block transition-colors duration-300">Nota desejada</label>
               <input
                 type="number"
                 defaultValue={1000}

@@ -20,7 +20,7 @@ export default function Cadastro() {
           </Heading>
           <form className="space-y-6">
             <div>
-              <label className="block text-sm font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
+              <label className="block small font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
                 Nome completo
               </label>
               <input
@@ -30,7 +30,7 @@ export default function Cadastro() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
+              <label className="block small font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
                 Email
               </label>
               <input
@@ -40,7 +40,7 @@ export default function Cadastro() {
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
+              <label className="block small font-medium text-secondary dark:text-[#A9A9A9] mb-2 transition-colors duration-300">
                 Senha
               </label>
               <input
@@ -49,7 +49,7 @@ export default function Cadastro() {
                 placeholder="••••••••"
               />
             </div>
-            <div className="text-sm text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
+            <div className="small text-secondary dark:text-[#A9A9A9] transition-colors duration-300">
               <input type="checkbox" className="mr-2" />
               <span>Concordo com os termos de uso e política de privacidade</span>
             </div>
@@ -60,7 +60,7 @@ export default function Cadastro() {
               Criar conta
             </Button>
           </form>
-          <p className="text-center text-sm text-secondary dark:text-[#A9A9A9] mt-6 transition-colors duration-300">
+          <p className="text-center small text-secondary dark:text-[#A9A9A9] mt-6 transition-colors duration-300">
             Já tem uma conta?{' '}
             <Link href="/login" className="text-accent hover:underline">
               Entrar

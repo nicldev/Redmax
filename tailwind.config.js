@@ -17,7 +17,9 @@ module.exports = {
         border: '#E5E5E5',
       },
       fontFamily: {
-        sans: ['Inter', 'Rubik', 'Nunito', 'sans-serif'],
+        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        serif: ['Lora', 'Georgia', 'Times New Roman', 'serif'],
+        mono: ['Fira Code', 'Courier New', 'monospace'],
       },
       maxWidth: {
         'notion': '880px',

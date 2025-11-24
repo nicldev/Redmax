@@ -1,4 +1,4 @@
-# RedaIA Backend API
+#Backend API
 
 Backend completo em TypeScript com autenticação segura, verificação de e-mail e gerenciamento de conta.
 
