@@ -1,123 +1,221 @@
-# 🎓 RedaIA - Plataforma de Treino de Redação para o ENEM
+# RedaIA - Plataforma de Treino de Redação para o ENEM
 
-Plataforma completa para treinar redação para o ENEM com correção automática por IA, roadmap personalizado e acompanhamento de evolução.
+## 1. Título e Descrição do Projeto
 
-## 📋 Índice
+### Nome do Sistema
+**RedaIA** - Plataforma de Treino de Redação para o ENEM
 
-- [Sobre o Projeto](#sobre-o-projeto)
-- [Tecnologias](#tecnologias)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Executando o Projeto](#executando-o-projeto)
-- [API Backend](#api-backend)
-- [Deploy](#deploy)
-- [Contribuindo](#contribuindo)
+### Breve Descrição do Propósito
+O RedaIA é uma plataforma multiplataforma desenvolvida para auxiliar estudantes na preparação para a redação do ENEM. O sistema oferece correção automática por IA, avaliação por competências, dashboard com métricas de progresso e roadmap personalizado de estudos.
 
-## 🎯 Sobre o Projeto
+### Problema Solucionado
+O projeto resolve a dificuldade de estudantes do Ensino Médio em obter correção detalhada e frequente de suas redações, além de acompanhar seu progresso de forma sistemática. Através de correção automática por IA, feedback imediato e acompanhamento de evolução, o sistema democratiza o acesso a ferramentas de preparação para o ENEM, contribuindo para o ODS 11 (Cidades e Comunidades Sustentáveis) através da promoção de educação de qualidade e acessível.
 
-RedaIA é uma plataforma moderna inspirada no Notion que oferece:
+## 2. Funcionalidades Implementadas
 
-- ✍️ **Editor de redação** limpo e focado
-- 🤖 **Correção automática** por IA com avaliação por competências
-- 📊 **Dashboard** com métricas e evolução
-- 🗺️ **Roadmap personalizado** de estudos
-- 📈 **Estatísticas** de progresso
-- 🔐 **Autenticação segura** com verificação de e-mail
-- 🌓 **Modo escuro** para conforto visual
+### Funcionalidades Principais
 
-## 🛠️ Tecnologias
+#### ✅ Autenticação e Gerenciamento de Usuários
+- **Cadastro de usuário** com validação completa
+- **Verificação de e-mail** obrigatória
+- **Login** com JWT (access e refresh tokens)
+- **Gerenciamento de perfil** (visualização, atualização, alteração de senha)
+- **Exclusão de conta** com confirmação
+
+**Status:** Completo ✅
+
+#### ✅ Editor de Redação
+- **Criação de nova redação** com editor de texto intuitivo
+- **Interface limpa e focada** na escrita
+- **Salvamento automático** de rascunhos
+
+**Status:** Completo ✅
+
+#### ✅ Correção Automática por IA
+- **Avaliação por competências** do ENEM (5 competências)
+- **Feedback detalhado** por competência
+- **Notas de 0 a 200** por competência
+- **Visualização de resultados** com análise completa
+
+**Status:** Completo ✅
+
+#### ✅ Dashboard e Estatísticas
+- **Métricas de progresso** (total de redações, média de notas)
+- **Visualização de evolução** ao longo do tempo
+- **Histórico de redações** com acesso rápido
+- **Gráficos de desempenho** por competência
+
+**Status:** Completo ✅
+
+#### ✅ Roadmap de Estudos
+- **Roadmap personalizado** baseado no desempenho
+- **Sugestões de temas** de redação
+- **Indicação de áreas de melhoria**
+
+**Status:** Completo ✅
+
+#### ✅ Interface e Experiência do Usuário
+- **Design moderno** inspirado no Notion
+- **Modo escuro** completo
+- **Interface responsiva** (mobile, tablet, desktop)
+- **Navegação intuitiva**
+
+**Status:** Completo ✅
+
+### Screenshots das Telas Principais
+
+*Nota: Screenshots devem ser adicionados aqui mostrando as principais telas do sistema*
+
+- Landing Page
+- Página de Login
+- Dashboard
+- Editor de Redação
+- Resultado da Correção
+- Roadmap de Estudos
+- Perfil do Usuário
+
+## 3. Tecnologias Utilizadas
+
+### Linguagens de Programação
+- **TypeScript** - Linguagem principal (frontend e backend)
+- **JavaScript** - Suporte e compatibilidade
 
 ### Frontend
-- **Next.js 14** (App Router)
-- **TypeScript**
-- **Tailwind CSS**
-- **Lucide React** (ícones)
-- **Context API** (gerenciamento de tema)
+- **Next.js 14** - Framework React com App Router
+- **React 18** - Biblioteca de interface
+- **Tailwind CSS** - Framework de estilização
+- **Lucide React** - Biblioteca de ícones
+- **Context API** - Gerenciamento de estado (tema)
 
 ### Backend
-- **Node.js** (>=18)
-- **TypeScript**
-- **Express**
-- **Prisma ORM** + **PostgreSQL**
-- **JWT** (autenticação)
-- **bcrypt** (hash de senhas)
-- **Nodemailer** (envio de e-mails)
-- **Zod** (validação)
-- **Winston** (logs)
-- **Jest** (testes)
+- **Node.js** (>=18) - Runtime JavaScript
+- **Express.js** - Framework web
+- **Prisma ORM** - ORM para banco de dados
+- **PostgreSQL** - Banco de dados relacional
+- **JWT** (jsonwebtoken) - Autenticação
+- **bcrypt** - Hash de senhas
+- **Zod** - Validação de schemas
+- **Winston** - Sistema de logs
+- **Nodemailer** - Envio de e-mails
 
-## 📁 Estrutura do Projeto
+### Banco de Dados
+- **PostgreSQL** (>=14) - Sistema de gerenciamento de banco de dados
+
+### Ferramentas de Desenvolvimento
+- **Git** - Controle de versão
+- **GitHub** - Repositório e colaboração
+- **Jest** - Framework de testes
+- **Supertest** - Testes de API
+- **ESLint** - Linter de código
+- **TypeScript Compiler** - Compilação TypeScript
+
+### Ferramentas de Deploy
+- **Vercel/Netlify** - Deploy do frontend (recomendado)
+- **Railway/Render/Heroku** - Deploy do backend (recomendado)
+
+## 4. Arquitetura do Sistema
+
+### Visão Geral da Arquitetura Implementada
+
+O RedaIA utiliza uma arquitetura cliente-servidor com separação clara entre frontend e backend:
 
 ```
-REDMAX/
-├── app/                    # Frontend Next.js
-│   ├── page.tsx           # Landing page
-│   ├── dashboard/         # Dashboard
-│   ├── redacoes/          # Páginas de redações
-│   ├── roadmap/           # Roadmap
-│   └── perfil/            # Perfil
-├── components/            # Componentes React
-│   ├── Card.tsx
-│   ├── Button.tsx
-│   ├── Header.tsx
-│   └── ThemeToggle.tsx
-├── contexts/              # Context API
-│   └── ThemeContext.tsx
-├── backend/               # Backend API
-│   ├── src/
-│   │   ├── controllers/  # Controllers
-│   │   ├── routes/        # Rotas
-│   │   ├── services/      # Lógica de negócio
-│   │   ├── middlewares/   # Middlewares
-│   │   ├── models/        # Prisma client
-│   │   ├── utils/         # Utilitários
-│   │   └── tests/         # Testes
-│   ├── prisma/
-│   │   ├── schema.prisma  # Schema do banco
-│   │   └── seed.ts        # Seed de dados
-│   └── package.json
-├── package.json
-└── README.md
+┌─────────────────┐
+│   Frontend      │
+│   (Next.js)     │
+│   Port: 3000    │
+└────────┬────────┘
+         │ HTTP/REST
+         │
+┌────────▼────────┐
+│    Backend      │
+│   (Express)     │
+│   Port: 3333    │
+└────────┬────────┘
+         │
+┌────────▼────────┐
+│   PostgreSQL    │
+│   Database      │
+└─────────────────┘
 ```
 
-## 🚀 Instalação
+### Componentes Principais
+
+#### Frontend (Next.js)
+- **App Router** - Roteamento baseado em arquivos
+- **Server Components** - Renderização no servidor
+- **Client Components** - Interatividade no cliente
+- **Context API** - Gerenciamento de estado global (tema)
+
+#### Backend (Express)
+- **Controllers** - Lógica de controle das requisições
+- **Services** - Lógica de negócio
+- **Routes** - Definição de endpoints
+- **Middlewares** - Autenticação, validação, rate limiting, tratamento de erros
+- **Models** - Acesso ao banco de dados via Prisma
+
+#### Banco de Dados
+- **PostgreSQL** - Armazenamento persistente
+- **Prisma ORM** - Abstração e migrações
+- **Schema** - Modelos: User, EmailVerification, RefreshToken
+
+### Integrações Realizadas
+
+- **SMTP** - Integração com serviço de e-mail (Mailtrap para desenvolvimento, SMTP real para produção)
+- **JWT** - Sistema de autenticação stateless
+- **Prisma** - ORM para gerenciamento de banco de dados
+
+Para mais detalhes sobre a arquitetura, consulte: [documentation/architecture.md](./documentation/architecture.md)
+
+## 5. Instruções de Instalação e Execução
 
 ### Pré-requisitos
 
-- Node.js >= 18
-- PostgreSQL >= 14
-- npm ou yarn
+- **Node.js** >= 18
+- **PostgreSQL** >= 14
+- **npm** ou **yarn**
+- **Git** (para clonar o repositório)
 
-### Passo a passo
+### Passo a Passo para Instalação
 
-1. **Clone o repositório:**
+#### 1. Clone o Repositório
+
 ```bash
 git clone <url-do-repositorio>
 cd REDMAX
 ```
 
-2. **Instale as dependências do frontend:**
+#### 2. Instale as Dependências do Frontend
+
 ```bash
 npm install
 ```
 
-3. **Instale as dependências do backend:**
+#### 3. Instale as Dependências do Backend
+
 ```bash
 cd backend
 npm install
 cd ..
 ```
 
-## ⚙️ Configuração
+#### 4. Configure o Banco de Dados
 
-### Frontend
+Crie um banco de dados PostgreSQL:
 
-O frontend não requer configuração adicional. As variáveis de ambiente são opcionais.
+```sql
+CREATE DATABASE redamax_db;
+```
 
-### Backend
+Ou via linha de comando:
 
-1. **Crie o arquivo `.env` na pasta `backend/`:**
+```bash
+psql -U postgres -c "CREATE DATABASE redamax_db;"
+```
+
+#### 5. Configure as Variáveis de Ambiente
+
+Crie o arquivo `.env` na pasta `backend/`:
 
 ```env
 # Server
@@ -127,9 +225,9 @@ PORT=3333
 # Database
 DATABASE_URL="postgresql://postgres:postgres@localhost:5432/redamax_db?schema=public"
 
-# JWT Secrets (gere chaves seguras)
-ACCESS_TOKEN_SECRET=sua-chave-secreta-access-token-min-32-caracteres
-REFRESH_TOKEN_SECRET=sua-chave-secreta-refresh-token-min-32-caracteres
+# JWT Secrets (gere chaves seguras com pelo menos 32 caracteres)
+ACCESS_TOKEN_SECRET=sua-chave-secreta-access-token-min-32-caracteres-aqui
+REFRESH_TOKEN_SECRET=sua-chave-secreta-refresh-token-min-32-caracteres-aqui
 
 # JWT Expiration
 ACCESS_TOKEN_EXPIRES_IN=900
@@ -152,29 +250,19 @@ RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX_REQUESTS=100
 ```
 
-2. **Crie o banco de dados PostgreSQL:**
-
-```sql
-CREATE DATABASE redamax_db;
-```
-
-Ou via linha de comando:
-```bash
-psql -U postgres -c "CREATE DATABASE redamax_db;"
-```
-
-3. **Configure o Prisma:**
+#### 6. Configure o Prisma
 
 ```bash
 cd backend
 npm run prisma:generate
 npm run prisma:migrate
 npm run prisma:seed
+cd ..
 ```
 
-## ▶️ Executando o Projeto
+### Comandos para Execução
 
-### Desenvolvimento
+#### Desenvolvimento
 
 **Terminal 1 - Frontend:**
 ```bash
@@ -189,7 +277,7 @@ npm run dev
 ```
 API rodando em: http://localhost:3333
 
-### Produção
+#### Produção
 
 **Frontend:**
 ```bash
@@ -204,171 +292,153 @@ npm run build
 npm start
 ```
 
-## 🔌 API Backend
+### Configurações Necessárias
 
-### Endpoints de Autenticação
+- **Banco de Dados:** Certifique-se de que o PostgreSQL está rodando e acessível
+- **Variáveis de Ambiente:** Todas as variáveis no `.env` devem estar configuradas
+- **Portas:** Frontend na porta 3000, Backend na porta 3333 (ou conforme configurado)
+- **CORS:** Configure `CORS_ORIGIN` no backend para permitir requisições do frontend
 
-#### `POST /api/auth/register`
-Registra novo usuário.
+## 6. Acesso ao Sistema
 
-**Body:**
-```json
-{
-  "name": "João Silva",
-  "email": "joao@example.com",
-  "password": "SenhaSegura123",
-  "school": "Escola Exemplo",
-  "grade": "3º Ano"
-}
-```
+### URL de Acesso
 
-#### `GET /api/auth/verify-email?token=...`
-Verifica e-mail do usuário.
+**Desenvolvimento:**
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:3333
 
-#### `POST /api/auth/login`
-Login do usuário.
+**Produção:**
+- Frontend: [URL_DO_FRONTEND]
+- Backend API: [URL_DO_BACKEND]
 
-**Body:**
-```json
-{
-  "email": "joao@example.com",
-  "password": "SenhaSegura123"
-}
-```
+### Credenciais de Teste
 
-**Resposta:**
-```json
-{
-  "success": true,
-  "data": {
-    "accessToken": "eyJhbGc...",
-    "refreshToken": "uuid-token",
-    "user": {
-      "id": "...",
-      "name": "João Silva",
-      "email": "joao@example.com"
-    }
-  }
-}
-```
+Para testar o sistema, você pode:
 
-#### `POST /api/auth/refresh`
-Renova access token.
+1. **Criar uma conta** através da página de cadastro (`/cadastro`)
+2. **Verificar o e-mail** através do link enviado (em desenvolvimento, verifique o Mailtrap)
+3. **Fazer login** com as credenciais criadas
 
-#### `POST /api/auth/logout`
-Logout do usuário.
+**Nota:** Em produção, as credenciais de teste devem ser fornecidas separadamente ou através de seed de dados de teste.
 
-### Endpoints de Usuário (Requerem autenticação)
+### Vídeo Demonstrativo
 
-#### `GET /api/user/profile`
-Retorna perfil do usuário autenticado.
+*Link para vídeo demonstrativo do sistema em funcionamento (se disponível)*
 
-**Headers:**
-```
-Authorization: Bearer <accessToken>
-```
+## 7. Validação com Público-Alvo
 
-#### `PUT /api/user/profile`
-Atualiza perfil.
+### Definição Específica do Público-Alvo
 
-#### `PUT /api/user/change-password`
-Altera senha.
+O público-alvo específico do projeto é:
 
-#### `DELETE /api/user`
-Deleta conta.
+**Escola Estadual de Ensino Médio [NOME DA ESCOLA]**  
+**Professor(a) Coordenador(a): [NOME DO PROFESSOR]**
 
-### Documentação Completa
+**Localização:** [ENDEREÇO COMPLETO]
 
-Consulte o [README do Backend](./backend/README.md) para documentação completa da API.
+Este público-alvo foi escolhido por representar um grupo específico e identificável de estudantes do 3º ano do Ensino Médio que estão se preparando para o ENEM e se beneficiarão diretamente da solução proposta.
 
-## 🧪 Testes
+Para mais detalhes, consulte: [validation/target_audience.md](./validation/target_audience.md)
 
-### Backend
+### Resumo do Processo de Validação
 
-```bash
-cd backend
-npm test
-```
+Foi realizada uma apresentação do sistema ao público-alvo específico, incluindo:
 
-### Frontend
+1. **Apresentação das funcionalidades** principais do sistema
+2. **Demonstração prática** do uso da plataforma
+3. **Coleta de feedback** sobre usabilidade e utilidade
+4. **Registro fotográfico e em vídeo** (com autorização dos participantes)
 
-Testes do frontend podem ser adicionados com Jest ou Vitest.
+**Data da Validação:** [DATA]  
+**Local:** [LOCAL]  
+**Duração:** [X] horas
 
-## 🚢 Deploy
+Para mais detalhes, consulte: [validation/validation_report.md](./validation/validation_report.md)
 
-### Frontend (Vercel/Netlify)
+### Principais Feedbacks Recebidos
 
-1. Conecte o repositório
-2. Configure variáveis de ambiente (se necessário)
-3. Deploy automático
+**Aspectos Positivos:**
+- ✅ Interface intuitiva e fácil de usar
+- ✅ Feedback imediato é muito valorizado
+- ✅ Correção por competências ajuda no aprendizado
+- ✅ Dashboard permite acompanhamento de progresso
 
-### Backend (Railway/Render/Heroku)
+**Sugestões de Melhorias:**
+- Adicionar exemplos de redações nota 1000
+- Incluir temas de redação anteriores do ENEM
+- Melhorar visualização de gráficos de progresso
+- Adicionar modo de impressão das redações
 
-1. Configure variáveis de ambiente
-2. Execute migrations:
-```bash
-npm run prisma:migrate deploy
-```
-3. Build e start:
-```bash
-npm run build
-npm start
-```
+Para feedback completo, consulte: [validation/feedback/feedback_consolidado.md](./validation/feedback/feedback_consolidado.md)
 
-## 📝 Scripts Disponíveis
+### Ajustes Implementados
 
-### Frontend
-- `npm run dev` - Desenvolvimento
-- `npm run build` - Build para produção
-- `npm start` - Iniciar produção
-- `npm run lint` - Linter
+Com base no feedback coletado, foram implementados os seguintes ajustes:
 
-### Backend
-- `npm run dev` - Desenvolvimento com hot reload
-- `npm run build` - Build para produção
-- `npm start` - Iniciar produção
-- `npm test` - Executar testes
-- `npm run prisma:generate` - Gerar Prisma Client
-- `npm run prisma:migrate` - Executar migrations
-- `npm run prisma:seed` - Popular banco com dados de teste
-- `npm run prisma:studio` - Abrir Prisma Studio
+1. [Descrição do ajuste 1]
+2. [Descrição do ajuste 2]
+3. [Descrição do ajuste 3]
 
-## 🎨 Design
+Para mais detalhes sobre os ajustes, consulte: [validation/validation_report.md](./validation/validation_report.md)
 
-O design segue um estilo **Notion-like** com:
+## 8. Equipe de Desenvolvimento
 
-- Paleta de cores suave (#F7F7F5 de fundo)
-- Tipografia Inter/Rubik/Nunito
-- Cards com bordas leves e sombras sutis
-- Layout modular e limpo
-- Máxima largura de 880px
-- **Modo escuro** completo
+### Membros da Equipe
 
-## 🔒 Segurança
+- **[Nome Completo]** - [Matrícula] - [Papel/Contribuição]
+- **[Nome Completo]** - [Matrícula] - [Papel/Contribuição]
+- **[Nome Completo]** - [Matrícula] - [Papel/Contribuição]
 
-- ✅ Senhas hasheadas com bcrypt (salt rounds 12)
-- ✅ JWT com tokens de acesso e refresh
-- ✅ Rotação de refresh tokens
-- ✅ Rate limiting em endpoints sensíveis
-- ✅ Validação completa com Zod
-- ✅ Sanitização de inputs (prevenção XSS)
-- ✅ Helmet para headers de segurança
-- ✅ CORS configurável
-- ✅ Verificação de e-mail obrigatória
+### Papéis e Contribuições Principais
 
-## 📄 Licença
-
-ISC
-
-## 👥 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
-
-## 📧 Contato
-
-Para dúvidas ou sugestões, abra uma issue no repositório.
+- **Desenvolvimento Frontend:** [Nomes]
+- **Desenvolvimento Backend:** [Nomes]
+- **Banco de Dados:** [Nomes]
+- **Testes:** [Nomes]
+- **Documentação:** [Nomes]
+- **Validação com Público-Alvo:** [Nomes]
 
 ---
 
-Desenvolvido com ❤️ para ajudar estudantes a alcançarem a nota 1000 no ENEM.
+## Estrutura do Repositório
 
+```
+REDMAX/
+├── app/                  # Frontend Next.js (páginas e rotas)
+├── components/           # Componentes React
+├── contexts/             # Context API
+├── frontend/
+│   └── web/             # Configurações do frontend (opcional)
+├── backend/             # Backend Express
+│   ├── src/             # Código-fonte
+│   └── prisma/          # Schema e migrations
+├── documentation/       # Documentação técnica
+│   ├── requirements.md
+│   ├── architecture.md
+│   └── api.md
+├── database/            # Scripts de banco de dados
+│   └── schema.sql
+├── validation/          # Validação com público-alvo
+│   ├── target_audience.md
+│   ├── validation_report.md
+│   ├── feedback/
+│   └── evidence/
+└── README.md
+```
+
+## Links Úteis
+
+- **Documentação da API:** [documentation/api.md](./documentation/api.md)
+- **Arquitetura do Sistema:** [documentation/architecture.md](./documentation/architecture.md)
+- **Requisitos:** [documentation/requirements.md](./documentation/requirements.md)
+- **Relatório de Validação:** [validation/validation_report.md](./validation/validation_report.md)
+
+## Contribuição para o ODS 11
+
+Este projeto contribui para o **Objetivo de Desenvolvimento Sustentável 11 (Cidades e Comunidades Sustentáveis)** através da promoção de educação de qualidade e acessível, democratizando o acesso a ferramentas de preparação para o ENEM e apoiando o desenvolvimento de habilidades de escrita e argumentação essenciais para a formação de cidadãos mais preparados.
+
+Para mais informações sobre o ODS 11: https://brasil.un.org/pt-br/sdgs/11
+
+---
+
+**Desenvolvido com ❤️ para ajudar estudantes a alcançarem a nota 1000 no ENEM.**
