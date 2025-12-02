@@ -1,0 +1,128 @@
+// Prisma Schema para RedaIA Backend
+// Database: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model EmailVerification {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  token     String   @unique @default(uuid())
+  expiresAt DateTime @map("expires_at")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([token])
+  @@index([userId])
+  @@map("email_verifications")
+}
+
+model RefreshToken {
+  id        String    @id @default(cuid())
+  userId    String    @map("user_id")
+  tokenHash String    @map("token_hash")
+  expiresAt DateTime  @map("expires_at")
+  revokedAt DateTime? @map("revoked_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([tokenHash])
+  @@map("refresh_tokens")
+}
+
+model Theme {
+  id          String   @id @default(cuid())
+  title       String
+  description String?  @db.Text
+  category    String   // Ex: "Educação", "Meio Ambiente", "Saúde", etc.
+  year        Int?     // Ano do ENEM (opcional)
+  isActive    Boolean  @default(true) @map("is_active")
+  createdAt   DateTime @default(now()) @map("created_at")
+  updatedAt   DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  essays Essay[]
+
+  @@index([category])
+  @@index([isActive])
+  @@map("themes")
+}
+
+model Essay {
+  id          String   @id @default(cuid())
+  userId      String   @map("user_id")
+  themeId     String   @map("theme_id")
+  title       String?
+  content     String   @db.Text
+  wordCount   Int      @default(0) @map("word_count")
+  charCount   Int      @default(0) @map("char_count")
+  
+  // Avaliação
+  isEvaluated Boolean  @default(false) @map("is_evaluated")
+  totalScore  Int?     @map("total_score") // Nota total (0-1000)
+  scoreC1     Int?     @map("score_c1") // Domínio da escrita (0-200)
+  scoreC2     Int?     @map("score_c2") // Compreensão (0-200)
+  scoreC3     Int?     @map("score_c3") // Argumentação (0-200)
+  scoreC4     Int?     @map("score_c4") // Coesão (0-200)
+  scoreC5     Int?     @map("score_c5") // Proposta (0-200)
+  
+  // Feedback da IA
+  feedbackC1  String?  @db.Text @map("feedback_c1")
+  feedbackC2  String?  @db.Text @map("feedback_c2")
+  feedbackC3  String?  @db.Text @map("feedback_c3")
+  feedbackC4  String?  @db.Text @map("feedback_c4")
+  feedbackC5  String?  @db.Text @map("feedback_c5")
+  
+  // Pontos fortes e melhorias
+  strongPoints String? @db.Text @map("strong_points")
+  improvements String? @db.Text @map("improvements")
+  
+  // Sugestão de reescrita (opcional)
+  rewriteSuggestion String? @db.Text @map("rewrite_suggestion")
+  
+  // Metadados da avaliação
+  evaluatedAt DateTime? @map("evaluated_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  // Relations
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  theme Theme @relation(fields: [themeId], references: [id])
+
+  @@index([userId])
+  @@index([themeId])
+  @@index([isEvaluated])
+  @@index([createdAt])
+  @@map("essays")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String
+  email         String    @unique
+  passwordHash  String    @map("password_hash")
+  emailVerified Boolean   @default(false) @map("email_verified")
+  school        String?
+  grade         String?
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+
+  // Relations
+  emailVerifications EmailVerification[]
+  refreshTokens      RefreshToken[]
+  essays             Essay[]
+
+  @@map("users")
+}
+

@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Next.js
+/.next/
+/out/
+frontend/web/.next/
+frontend/web/out/
+
+# Production
+/build
+/dist
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env
+.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Prisma
+backend/prisma/migrations/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Database
+*.db
+*.sqlite
+
+# Files with API keys and secrets (should not be committed)
+*.env.temp
+*CHAVE*.txt
+*API_KEY*.txt
+*CHAVES*.txt
+backend/*.env
+backend/ADICIONAR_CHAVES*.ps1
+backend/ADICIONAR_CHAVES*.bat
+backend/ADICIONAR_CHAVES*.txt
+backend/CHAVES*.txt
+backend/COPIAR*.txt
+backend/GROQ_API_KEY.txt
