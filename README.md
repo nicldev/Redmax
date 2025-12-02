@@ -269,7 +269,7 @@ Atualmente, o sistema não possui credenciais de teste pré-configuradas. Para t
 
 Assista ao vídeo demonstrativo do sistema em funcionamento:
 
-**[🎬 Link do vídeo demonstrativo](https://www.youtube.com/watch?v=Zp3bJw35sJ0&feature=youtu.be)**
+**[🎬 Link do vídeo demonstrativo](https://www.youtube.com/watch?v=aIu2M-98hQo&feature=youtu.be)**
 
 O vídeo apresenta todas as funcionalidades principais do Conexão Saber, incluindo cadastro, criação de redação, correção automática por IA e visualização de resultados.
 
