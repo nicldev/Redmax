@@ -1,9 +1,9 @@
 import request from 'supertest'
-import { createApp } from '../app'
-import prisma from '../models/prisma'
+import { createApp } from '../src/app'
+import prisma from '../src/models/prisma'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
-import { env } from '../utils/env'
+import { env } from '../src/utils/env'
 
 const app = createApp()
 

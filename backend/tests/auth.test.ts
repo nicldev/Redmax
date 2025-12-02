@@ -1,6 +1,6 @@
 import request from 'supertest'
-import { createApp } from '../app'
-import prisma from '../models/prisma'
+import { createApp } from '../src/app'
+import prisma from '../src/models/prisma'
 import bcrypt from 'bcrypt'
 
 const app = createApp()
