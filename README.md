@@ -1,65 +1,100 @@
 # Conexão Saber - Plataforma de Treino de Redação para o ENEM
 
-## 📋 Sobre o Projeto
+## 📋 Objetivo do Projeto
 
-O **Conexão Saber** é uma plataforma multiplataforma desenvolvida para auxiliar estudantes na preparação para a redação do ENEM. O sistema oferece correção automática por IA, avaliação por competências e dashboard com métricas de progresso.
+O **Conexão Saber** é uma plataforma multiplataforma desenvolvida para auxiliar estudantes na preparação para a redação do ENEM. O sistema oferece correção automática por Inteligência Artificial, avaliação detalhada por competências e dashboard com métricas de progresso para acompanhamento da evolução do estudante.
 
 ### Problema Solucionado
 
 O projeto resolve a dificuldade de estudantes do Ensino Médio em obter correção detalhada e frequente de suas redações, além de acompanhar seu progresso de forma sistemática. Através de correção automática por IA, feedback imediato e acompanhamento de evolução, o sistema democratiza o acesso a ferramentas de preparação para o ENEM, contribuindo para o ODS 11 (Cidades e Comunidades Sustentáveis) através da promoção de educação de qualidade e acessível.
 
-## 🚀 Funcionalidades
+## 🚀 Funcionalidades Implementadas
 
-- ✅ **Autenticação completa** - Cadastro, login, verificação de e-mail
-- ✅ **Editor de redação** - Interface intuitiva para escrita
-- ✅ **Correção automática por IA** - Avaliação por 5 competências do ENEM
-- ✅ **Dashboard** - Métricas de progresso e histórico de redações
-- ✅ **Modo escuro** - Interface moderna e responsiva
-- ✅ **Gerenciamento de temas** - Temas de redação para prática
+### ✅ Sistema de Autenticação e Gerenciamento de Usuários
+- **Cadastro de usuário** com validação completa de dados
+- **Verificação de e-mail** obrigatória para ativação da conta
+- **Login seguro** com JWT (access token e refresh token)
+- **Recuperação de senha** através de e-mail
+- **Gerenciamento de perfil** (visualização, atualização, alteração de senha)
+- **Exclusão de conta** com confirmação
 
-## 🛠️ Tecnologias
+### ✅ Editor de Redação
+- **Criação de nova redação** com editor de texto intuitivo e limpo
+- **Interface focada na escrita** sem distrações
+- **Contador de palavras e caracteres** em tempo real
+- **Salvamento automático** de rascunhos
+- **Seleção de temas** de redação para prática
+
+### ✅ Correção Automática por Inteligência Artificial
+- **Avaliação por competências** do ENEM (5 competências avaliadas)
+  - Competência 1: Domínio da escrita formal
+  - Competência 2: Compreensão do tema
+  - Competência 3: Argumentação
+  - Competência 4: Coesão e coerência
+  - Competência 5: Proposta de intervenção
+- **Feedback detalhado** por competência com explicações
+- **Notas de 0 a 200** por competência (total de 0 a 1000)
+- **Análise de pontos fortes** e pontos de melhoria
+- **Sugestões de melhoria** específicas para cada competência
+- **Visualização de resultados** completa e organizada
+
+### ✅ Dashboard e Estatísticas
+- **Métricas de progresso** (total de redações, média de notas)
+- **Visualização de evolução** ao longo do tempo
+- **Histórico de redações** com acesso rápido a todas as avaliações
+- **Gráficos de desempenho** por competência
+- **Análise comparativa** entre redações
+
+### ✅ Gerenciamento de Temas
+- **Catálogo de temas** de redação para prática
+- **Temas organizados por categoria** (Educação, Meio Ambiente, Saúde, etc.)
+- **Temas de edições anteriores do ENEM**
+- **Criação e gerenciamento de temas** (administradores)
+
+### ✅ Interface e Experiência do Usuário
+- **Design moderno** inspirado no Notion
+- **Modo escuro/claro** completo
+- **Interface responsiva** (mobile, tablet, desktop)
+- **Navegação intuitiva** e acessível
+- **Feedback visual** para todas as ações
+
+## 🛠️ Tecnologias Utilizadas
 
 ### Frontend
-- **Next.js 14** - Framework React com App Router
-- **TypeScript** - Tipagem estática
-- **Tailwind CSS** - Estilização
-- **Context API** - Gerenciamento de estado
+- **Next.js 14** - Framework React com App Router para renderização do lado do servidor
+- **React 18** - Biblioteca JavaScript para construção de interfaces
+- **TypeScript** - Linguagem de programação com tipagem estática
+- **Tailwind CSS** - Framework CSS utilitário para estilização
+- **Lucide React** - Biblioteca de ícones moderna
+- **Context API** - Gerenciamento de estado global (autenticação e tema)
 
 ### Backend
-- **Node.js** (>=18) - Runtime JavaScript
-- **Express.js** - Framework web
-- **TypeScript** - Tipagem estática
-- **Prisma ORM** - ORM para banco de dados
-- **PostgreSQL** - Banco de dados relacional
-- **JWT** - Autenticação
-- **bcrypt** - Hash de senhas
-- **Zod** - Validação de schemas
+- **Node.js** (>=18) - Runtime JavaScript para execução no servidor
+- **Express.js** - Framework web minimalista e flexível
+- **TypeScript** - Tipagem estática para maior segurança de código
+- **Prisma ORM** - ORM moderno para acesso ao banco de dados
+- **PostgreSQL** (>=14) - Sistema de gerenciamento de banco de dados relacional
+- **JWT** (jsonwebtoken) - Autenticação stateless com tokens
+- **bcrypt** - Biblioteca para hash seguro de senhas
+- **Zod** - Biblioteca de validação de schemas
+- **Nodemailer** - Envio de e-mails para verificação e recuperação
+- **Winston** - Sistema de logging estruturado
+- **Google Gemini AI** - API de Inteligência Artificial para correção de redações
 
-## 📁 Estrutura do Projeto
+### Banco de Dados
+- **PostgreSQL** - Banco de dados relacional de código aberto
 
-```
-conexaosaber-main/
-├── backend/              # Backend Express
-│   ├── src/
-│   │   ├── controllers/ # Controllers
-│   │   ├── routes/      # Rotas da API
-│   │   ├── services/    # Lógica de negócio
-│   │   ├── middlewares/ # Middlewares
-│   │   └── utils/       # Utilitários
-│   └── prisma/          # Schema e migrations
-├── frontend/
-│   └── web/             # Frontend Next.js
-│       └── src/
-│           ├── app/     # Páginas
-│           ├── components/ # Componentes React
-│           └── contexts/   # Context API
-├── docs/                # Documentação técnica
-├── database/            # Scripts SQL
-├── validation/          # Validação com público-alvo
-└── README.md
-```
+### Ferramentas de Desenvolvimento
+- **Git** - Controle de versão
+- **GitHub** - Repositório e colaboração
+- **Jest** - Framework de testes unitários e de integração
+- **Supertest** - Testes de API HTTP
+- **ESLint** - Linter de código para qualidade
+- **TypeScript Compiler** - Compilação TypeScript
 
-## 🔧 Pré-requisitos
+## 📦 Instruções de Instalação e Execução
+
+### Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado:
 
@@ -67,8 +102,6 @@ Antes de começar, certifique-se de ter instalado:
 - **PostgreSQL** >= 14
 - **npm** ou **yarn**
 - **Git**
-
-## 📦 Instalação e Configuração
 
 ### 1. Clone o Repositório
 
@@ -136,15 +169,16 @@ CORS_ORIGIN=http://localhost:3000
 RATE_LIMIT_WINDOW_MS=900000
 RATE_LIMIT_MAX_REQUESTS=100
 
-# AI Services (opcional - para correção por IA)
+# AI Services (obrigatório para correção por IA)
 GEMINI_API_KEY=sua-chave-gemini-aqui
-GROQ_API_KEY=sua-chave-groq-aqui
+GEMINI_MODEL=gemini-pro
 ```
 
 **⚠️ Importante:**
 - Substitua `postgres:postgres` pelas suas credenciais do PostgreSQL
 - Gere chaves secretas seguras para JWT (mínimo de 32 caracteres)
-- Configure o Mailtrap ou outro serviço SMTP para desenvolvimento
+- Configure o Mailtrap (https://mailtrap.io) para desenvolvimento ou outro serviço SMTP
+- Obtenha uma chave da API do Google Gemini AI em: https://makersuite.google.com/app/apikey
 
 #### 3.3 Configure o Prisma
 
@@ -219,15 +253,60 @@ npm run build
 npm start
 ```
 
-## 📚 Uso do Sistema
+## 📝 Credenciais de Teste
 
-1. **Acesse** http://localhost:3000 no navegador
-2. **Cadastre-se** criando uma nova conta
-3. **Verifique seu e-mail** através do link enviado (em desenvolvimento, verifique o Mailtrap)
-4. **Faça login** com suas credenciais
-5. **Crie uma redação** escolhendo um tema
-6. **Receba correção automática** por IA avaliando as 5 competências do ENEM
-7. **Acompanhe seu progresso** no dashboard
+Atualmente, o sistema não possui credenciais de teste pré-configuradas. Para testar o sistema:
+
+1. **Crie uma conta** através da página de cadastro (`/cadastro`)
+2. **Verifique seu e-mail** através do link enviado (em desenvolvimento, verifique o Mailtrap ou sua caixa de entrada)
+3. **Faça login** com as credenciais criadas
+4. **Crie uma redação** escolhendo um tema disponível
+5. **Receba a correção automática** por IA
+
+**Nota:** Em produção, as credenciais de teste podem ser fornecidas através de seed de dados ou configuração administrativa.
+
+## 🎥 Vídeo Demonstrativo
+
+Assista ao vídeo demonstrativo do sistema em funcionamento:
+
+**[🎬 Link do vídeo demonstrativo](https://www.youtube.com/watch?v=Zp3bJw35sJ0&feature=youtu.be)**
+
+O vídeo apresenta todas as funcionalidades principais do Conexão Saber, incluindo cadastro, criação de redação, correção automática por IA e visualização de resultados.
+
+## 📚 Documentação Técnica
+
+A documentação técnica completa está disponível na pasta `docs/`:
+
+- **Documentação da API:** [docs/api/api_documentation.md](./docs/api/api_documentation.md)
+- **Arquitetura do Sistema:** [docs/architecture/architecture.md](./docs/architecture/architecture.md)
+- **Requisitos:** [docs/requirements/requirements.md](./docs/requirements/requirements.md)
+- **Relatório de Validação:** [validation/validation_report.md](./validation/validation_report.md)
+
+## 📁 Estrutura do Projeto
+
+```
+conexaosaber-main/
+├── backend/              # Backend Express
+│   ├── src/
+│   │   ├── controllers/ # Controllers
+│   │   ├── routes/      # Rotas da API
+│   │   ├── services/    # Lógica de negócio
+│   │   ├── middlewares/ # Middlewares
+│   │   ├── utils/       # Utilitários
+│   │   └── validators/  # Validadores
+│   └── prisma/          # Schema e migrations
+├── frontend/
+│   └── web/             # Frontend Next.js
+│       └── src/
+│           ├── app/     # Páginas
+│           ├── components/ # Componentes React
+│           ├── contexts/   # Context API
+│           └── lib/       # Bibliotecas e utilitários
+├── docs/                # Documentação técnica
+├── database/            # Scripts SQL
+├── validation/          # Validação com público-alvo
+└── README.md
+```
 
 ## 🧪 Testes
 
@@ -244,14 +323,7 @@ Para executar em modo watch:
 npm run test:watch
 ```
 
-## 📖 Documentação
-
-- **Documentação da API:** [docs/api/api_documentation.md](./docs/api/api_documentation.md)
-- **Arquitetura:** [docs/architecture/architecture.md](./docs/architecture/architecture.md)
-- **Requisitos:** [docs/requirements/requirements.md](./docs/requirements/requirements.md)
-- **Validação:** [validation/validation_report.md](./validation/validation_report.md)
-
-## 👥 Equipe
+## 👥 Equipe de Desenvolvimento
 
 - Cleberson Assunção Tavares - Matrícula: 2325404
 - Francisco Flavio Rodrigues de Menezes - Matrícula: 2314219
@@ -262,7 +334,7 @@ npm run test:watch
 
 ## 🌱 Contribuição para o ODS 11
 
-Este projeto contribui para o **Objetivo de Desenvolvimento Sustentável 11 (Cidades e Comunidades Sustentáveis)** através da promoção de educação de qualidade e acessível, democratizando o acesso a ferramentas de preparação para o ENEM.
+Este projeto contribui para o **Objetivo de Desenvolvimento Sustentável 11 (Cidades e Comunidades Sustentáveis)** através da promoção de educação de qualidade e acessível, democratizando o acesso a ferramentas de preparação para o ENEM e apoiando o desenvolvimento de habilidades de escrita e argumentação essenciais para a formação de cidadãos mais preparados.
 
 Para mais informações sobre o ODS 11: https://brasil.un.org/pt-br/sdgs/11
 
