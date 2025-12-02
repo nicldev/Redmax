@@ -319,7 +319,7 @@ npm run test:watch
 
 | Nome                                      | Matrícula | Papel                            | Principais Contribuições                                                          |
 |-------------------------------------------|-----------|----------------------------------|-----------------------------------------------------------------------------------|
-| **Nicolas Lima Ribeiro**                  | 2326327   | Frontend & Documentação          | Desenvolvimento da UI, páginas, rotas, integração com API e documentação do projeto |
+| **Nicolas Lima Ribeiro**                  | 2326327   | Frontend & Documentação          | Desenvolvimento da UI, páginas, rotas e documentação do projeto |
 | **Thiago Targino de Souza**               | 2326340   | Backend & Banco de Dados         | Modelagem do banco, CRUD, autenticação, serviços e infraestrutura da API          |
 | **Rodrigo de Queiroz Oliveira Rodrigues** | 2326198   | QA / Testes                      | Testes funcionais e validação da experiência do usuário                           |
 | **Francisco Flavio Rodrigues de Menezes** | 2314219   | QA / Testes                      | Testes, revisão e acompanhamento de funcionalidades                               |
